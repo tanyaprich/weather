@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  background-color: lightblue;
+}
+
+header, footer {
+  background: #7F00FF;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #E100FF, #7F00FF);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #E100FF, #7F00FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+  padding: .5em;
+  color: white;
+}
+
+button {
+  background-color: #E100FF;
+  color: white;
+  font-size: 1.3rem;
+  padding: .6em 1.5em;
+  border-radius: 2rem;
+  border: 2px solid white;
+
+}
+
+button:hover {
+  border: 2px solid #E100FF;
+  background-color: white;
+  color: #E100FF
+}
+
+input {
+  font-size: 1rem;
+  padding: .6em 1.5em;
+  border-radius: 2em;
+  border: 0;
+  margin-right: 2em;
+  border: #E100FF 2px solid;
+}
+
+.weather-now {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 500px;
+  padding: 1em;
+}
