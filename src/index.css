@@ -53,10 +53,24 @@ input {
   border: #E100FF 2px solid;
 }
 
-.weather-now {
+
+
+.weather-data {
   display: flex;
-  flex-direction: column;
+  width: fit-content;
   justify-content: space-between;
-  width: 500px;
-  padding: 1em;
+  font-size: 1.5rem;
+  gap: 30px;
+}
+
+.weather-data img {
+  height: 3em;
+}
+
+.location {
+  font-size: 1.3rem;
+}
+
+a {
+  color: inherit;
 }
