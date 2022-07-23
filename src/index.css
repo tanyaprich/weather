@@ -53,6 +53,12 @@ input {
   border: #E100FF 2px solid;
 }
 
+form {
+  display: flex;
+  gap: 2em;
+  margin-top: 1em;
+}
+
 
 
 .weather-data {
@@ -69,8 +75,14 @@ input {
 
 .location {
   font-size: 1.3rem;
+  padding-bottom: 0;
+
 }
 
 a {
   color: inherit;
+}
+
+.weather-wrapper {
+  padding: 0 1em;
 }

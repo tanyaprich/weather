@@ -23,7 +23,7 @@ export default function Weather() {
     useEffect(() => {
         if(weatherData.current) {
             setDisplayedData(
-                <div>
+                <div className="weather-wrapper">
                 <div>
                     <p className="location">Weather in {weatherData.location.name}, {weatherData.location.country}</p>
                     <div className="weather-data">
@@ -91,10 +91,6 @@ export default function Weather() {
             <div>
                 {displayedData}
             </div>
-       
-            
-        
-            
             </div>
         )
 }
