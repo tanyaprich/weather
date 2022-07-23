@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import Prognosis from './Prognosis'
 
 export default function Weather() {
     const [weatherData, setWeatherData] = useState({})
@@ -15,9 +16,6 @@ export default function Weather() {
             .then(response => setWeatherData(response))
             .catch(err => console.log(`this is your ${err}`))
     }, [location]) 
-    console.log(weatherData)
-
-  
 
     useEffect(() => {
         if(weatherData.current) {
@@ -33,24 +31,14 @@ export default function Weather() {
                 </div>
 
                 <div className="prognosis">
-                     <div className="weather-data">
-                        <p>{weatherData.forecast.forecastday[0].date}</p>
-                        <p>{weatherData.forecast.forecastday[0].day.avgtemp_c} °C </p>
-                        <p>{weatherData.forecast.forecastday[0].hour[12].condition.text}</p>
-                        <img src={weatherData.forecast.forecastday[0].hour[12].condition.icon} />
-                    </div>
-                    <div className="weather-data">
-                        <p>{weatherData.forecast.forecastday[1].date}</p>
-                        <p>{weatherData.forecast.forecastday[1].day.avgtemp_c} °C </p>
-                        <p>{weatherData.forecast.forecastday[1].hour[12].condition.text}</p>
-                        <img src={weatherData.forecast.forecastday[1].hour[12].condition.icon} />
-                    </div>
-                    <div className="weather-data">
-                        <p>{weatherData.forecast.forecastday[2].date}</p>
-                        <p>{weatherData.forecast.forecastday[2].day.avgtemp_c} °C </p>
-                        <p>{weatherData.forecast.forecastday[2].hour[12].condition.text}</p>
-                        <img src={weatherData.forecast.forecastday[2].hour[12].condition.icon} />
-                    </div>
+                    {weatherData.forecast.forecastday.map(day => {
+                        return <Prognosis 
+                                    date={day.date}
+                                    avgtemp_c={day.day.avgtemp_c}
+                                    text={day.hour[12].condition.text}
+                                    icon={day.hour[12].condition.icon}
+                                />
+                    })}
                 </div>
                 </div>
             )
