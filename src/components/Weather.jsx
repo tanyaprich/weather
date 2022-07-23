@@ -10,11 +10,10 @@ export default function Weather() {
      
 
     useEffect(() => {
-        fetch(`http://api.weatherapi.com/v1/forecast.json?key=706c1d844460431da1935535222307&q=Tomsk&days=7&aqi=no&alerts=no`)
+        fetch(`http://api.weatherapi.com/v1/forecast.json?key=706c1d844460431da1935535222307&q=${location.city}&days=7&aqi=no&alerts=no`)
             .then(response => response.json())
             .then(response => setWeatherData(response))
             .catch(err => console.log(`this is your ${err}`))
-            console.log('renders')
     }, [location]) 
     console.log(weatherData)
 
