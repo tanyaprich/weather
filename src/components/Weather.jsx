@@ -52,11 +52,6 @@ export default function Weather() {
                         <p>{weatherData.forecast.forecastday[2].hour[12].condition.text}</p>
                         <img src={weatherData.forecast.forecastday[2].hour[12].condition.icon} />
                     </div>
-
-                    
-
-                    
-
                 </div>
                 </div>
             )
