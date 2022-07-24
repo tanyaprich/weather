@@ -70,6 +70,11 @@ form {
   font-size: 1.5rem;
   gap: 50px;
   text-align: center;
+  align-items: baseline;
+}
+
+.date {
+  font-size: 1rem;
 }
 
 .weather-data img {

@@ -23,11 +23,11 @@ export default function Weather() {
                 <div className="weather-wrapper">
                 <div>
                     <p className="location">Weather in {weatherData.location.name}, {weatherData.location.country}</p>
-                    <div className="weather-data">
-                        <h3>{weatherData.current.temp_c}°C</h3>
-                        <h3>{weatherData.current.condition.text}</h3>
-                        <img src={weatherData.current.condition.icon} />
-                    </div>
+                    <Prognosis 
+                        avgtemp_c={weatherData.current.temp_c}
+                        text={weatherData.current.condition.text}
+                        icon={weatherData.current.condition.icon}
+                    />
                 </div>
 
                 <div className="prognosis">
